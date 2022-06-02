@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxWidth="303.0" prefHeight="196.0" prefWidth="303.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="loginLabel" layoutX="122.0" layoutY="29.0" text="Log In">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginButton" layoutX="219.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#checkCreds" text="Log In">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="username" alignment="CENTER" layoutX="50.0" layoutY="76.0" prefWidth="200.0" promptText="Username">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="password" alignment="CENTER" layoutX="50.0" layoutY="108.0" prefWidth="200.0" promptText="Password">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </PasswordField>
+
+      <Label fx:id="errorLabel" layoutX="50.0" layoutY="145.0" text="Error">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" stroke="#241abb" strokeType="INSIDE" width="295.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutY="179.0" stroke="#241abb" strokeType="INSIDE" width="303.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="196.0" stroke="#241abb" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="196.0" layoutX="284.0" stroke="#241abb" strokeType="INSIDE" width="19.0" />
+   </children>
+</AnchorPane>

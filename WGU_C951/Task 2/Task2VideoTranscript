@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Alright, so the disaster environment is designed to represent an area that is on fire, the columns that make up the barrier are considered the flame inaccessible areas. So as you can see here, we have these columns making up a map for the robot to traverse through. All of these columns here represent areas that are on fire that the robot cannot enter or touch.  In the middle here you also see another set of columns. This represents a building that is on fire and the bot cannot traverse through that building
+
+ Now, you also notice that there is a cube here in the center which is representative of a person. The goal and purpose of this bot is to traverse through this environment safely and locate this person.  Once the person is located, a message that says "a person has been found" will be sent to the console window. The architecture of the bot is based off of the BubbleRob tutorial. We've made a few modifications to the BubbleRob robot to better fit this environment.
+
+The first of those modifications is the addition of these two cone like proximity sensors. These three proximity sensors allow the bot to go through the environment without running into or through any of these columns. There's also an additional angular sensor that allows the bot to locate the cube. Once the cube gets into the angular sensor, we will see that out the console window.
+
+One of the benefits of this bot is that it can complete this simulation without running into any of these columns or running into the cube. The robot can also create a semi map of the environment to help track its actions in practical use.
+
+This robot can help prevent loss of human life and reduce the danger of rescuers in an environment like this. It can also go through the simulated environment and help create KNOWLEDGE that will be very beneficial to people. 
+
+Lastly, I'd like to talk about some of the improvements that we could use to help make this robot function in a real world environment. The robot is very simplistic. It could definitely benefit from aspects of machine learning, such as unsupervised learning and reinforcement learning.
+
+In this simulation, we can observe that the bots actions are supervised and changes are made to ensure its success. In a real world scenario the environment will not be fully observable. And therefore we could use things in the machine learning realm to help with keeping track of its location, locating the people that it is trying to rescue, and providing more alerts to rescuers.
+
+As you can see here, the simulation will continue until we explicitly stop it, but it has been as successful as it did locate the person. So I'm going to go ahead and stop it now. Thank you for watching and have a good day.

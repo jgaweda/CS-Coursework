@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="360.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="124.0" layoutY="30.0" text="Modify Customer">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="modifySaveButton" layoutX="250.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#saveCustomer" text="Save">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="cancelButton" layoutX="298.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#loadCustomers" text="Cancel">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="50.0" layoutY="75.0" text="Customer ID">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="id" editable="false" layoutX="150.0" layoutY="71.0" onMouseClicked="#clearError" prefWidth="200.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="50.0" layoutY="106.0" text="Name">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="name" layoutX="150.0" layoutY="102.0" onMouseClicked="#clearError" prefWidth="200.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="50.0" layoutY="137.0" text="Address">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="address" layoutX="150.0" layoutY="133.0" onMouseClicked="#clearError" prefWidth="200.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="50.0" layoutY="168.0" text="Postal Code">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <TextField fx:id="postalCode" layoutX="150.0" layoutY="164.0" onMouseClicked="#clearError" prefWidth="200.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+        <Label layoutX="50.0" layoutY="199.0" text="Phone">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <TextField fx:id="phone" layoutX="150.0" layoutY="195.0" onMouseClicked="#clearError" prefWidth="200.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+        <Label layoutX="50.0" layoutY="230.0" text="Division">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="division" layoutX="150.0" layoutY="226.0" onAction="#updateCountry" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="50.0" layoutY="261.0" text="Country">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="country" layoutX="150.0" layoutY="257.0" onAction="#updateDivision" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label fx:id="errorLabel" layoutX="50.0" layoutY="304.0" text="Error">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="360.0" stroke="#241abb" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="360.0" layoutX="377.0" stroke="#241abb" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutX="9.0" layoutY="343.0" stroke="#241abb" strokeType="INSIDE" width="389.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutX="9.0" stroke="#241abb" strokeType="INSIDE" width="389.0" />
+    </children>
+</AnchorPane>

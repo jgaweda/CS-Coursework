@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="248.0" layoutY="24.0" text="Reports">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="contactRadio" layoutX="710.0" layoutY="31.0" mnemonicParsing="false" selected="true" text="Contact Schedules">
+            <font>
+                <Font size="12.0" />
+            </font>
+         <toggleGroup>
+                <ToggleGroup fx:id="radio" />
+         </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="locationRadio" layoutX="849.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#loadLocationReport" text="Appointments by Location" toggleGroup="$radio">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="typeMonthRadio" layoutX="501.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#loadReports" text="Appointments by Type and Month" toggleGroup="$radio">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+      <Button fx:id="appointmentsButton" layoutX="59.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#loadAppointments" text="Appointments">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="461.0" layoutY="172.0" text="Amari Andrews">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="470.0" layoutY="306.0" text="Bill Belichick">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableC" layoutX="50.0" layoutY="338.0" prefHeight="100.0" prefWidth="970.0" style="-fx-font-size: 11;">
+         <columns>
+            <TableColumn fx:id="tableCIDColumn" prefWidth="26.0" style="-fx-alignment: CENTER;" text="ID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="appointmentID" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCTitleColumn" prefWidth="116.0" style="-fx-alignment: CENTER;" text="Title">
+               <cellValueFactory>
+                  <PropertyValueFactory property="title" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCDescriptionColumn" prefWidth="182.0" style="-fx-alignment: CENTER;" text="Description">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCTypeColumn" prefWidth="142.0" style="-fx-alignment: CENTER;" text="Type">
+               <cellValueFactory>
+                  <PropertyValueFactory property="type" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCStartColumn" prefWidth="197.0" style="-fx-alignment: CENTER;" text="Start">
+               <cellValueFactory>
+                  <PropertyValueFactory property="startFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCEndColumn" minWidth="9.0" prefWidth="143.0" style="-fx-alignment: CENTER;" text="End">
+               <cellValueFactory>
+                  <PropertyValueFactory property="endFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCCustomerColumn" minWidth="0.0" prefWidth="163.0" style="-fx-alignment: CENTER;" text="Customer">
+               <cellValueFactory>
+                  <PropertyValueFactory property="customerID" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Label layoutX="473.0" layoutY="441.0" text="Chris Carson">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="511.0" stroke="#241abb" strokeType="INSIDE" width="20.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="511.0" layoutX="1045.0" stroke="#241abb" strokeType="INSIDE" width="20.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutY="507.0" stroke="#241abb" strokeType="INSIDE" width="1065.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" stroke="#241abb" strokeType="INSIDE" width="1054.0" />
+      <TableView fx:id="tableB" layoutX="48.0" layoutY="202.0" prefHeight="100.0" prefWidth="970.0" style="-fx-font-size: 11;">
+         <columns>
+            <TableColumn fx:id="tableCIDColumn1" prefWidth="26.0" style="-fx-alignment: CENTER;" text="ID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="appointmentID" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCTitleColumn1" prefWidth="116.0" style="-fx-alignment: CENTER;" text="Title">
+               <cellValueFactory>
+                  <PropertyValueFactory property="title" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCDescriptionColumn1" prefWidth="182.0" style="-fx-alignment: CENTER;" text="Description">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCTypeColumn1" prefWidth="142.0" style="-fx-alignment: CENTER;" text="Type">
+               <cellValueFactory>
+                  <PropertyValueFactory property="type" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCStartColumn1" prefWidth="197.0" style="-fx-alignment: CENTER;" text="Start">
+               <cellValueFactory>
+                  <PropertyValueFactory property="startFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCEndColumn1" minWidth="9.0" prefWidth="143.0" style="-fx-alignment: CENTER;" text="End">
+               <cellValueFactory>
+                  <PropertyValueFactory property="endFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCCustomerColumn1" minWidth="0.0" prefWidth="163.0" style="-fx-alignment: CENTER;" text="Customer">
+               <cellValueFactory>
+                  <PropertyValueFactory property="customerID" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <TableView fx:id="tableA" layoutX="48.0" layoutY="71.0" prefHeight="100.0" prefWidth="970.0" style="-fx-font-size: 11;">
+         <columns>
+            <TableColumn fx:id="tableCIDColumn2" prefWidth="26.0" style="-fx-alignment: CENTER;" text="ID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="appointmentID" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCTitleColumn2" prefWidth="116.0" style="-fx-alignment: CENTER;" text="Title">
+               <cellValueFactory>
+                  <PropertyValueFactory property="title" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCDescriptionColumn2" prefWidth="182.0" style="-fx-alignment: CENTER;" text="Description">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCTypeColumn2" prefWidth="142.0" style="-fx-alignment: CENTER;" text="Type">
+               <cellValueFactory>
+                  <PropertyValueFactory property="type" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCStartColumn2" prefWidth="197.0" style="-fx-alignment: CENTER;" text="Start">
+               <cellValueFactory>
+                  <PropertyValueFactory property="startFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCEndColumn2" minWidth="9.0" prefWidth="143.0" style="-fx-alignment: CENTER;" text="End">
+               <cellValueFactory>
+                  <PropertyValueFactory property="endFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableCCustomerColumn2" minWidth="0.0" prefWidth="163.0" style="-fx-alignment: CENTER;" text="Customer">
+               <cellValueFactory>
+                  <PropertyValueFactory property="customerID" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>

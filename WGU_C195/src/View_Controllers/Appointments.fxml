@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="84.0" layoutY="31.0" text="Appointments">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+      <RadioButton fx:id="allRadio" layoutX="414.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#viewAll" selected="true" text="All">
+         <font>
+            <Font size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="radio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="weekRadio" layoutX="492.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#viewWeek" prefHeight="17.0" prefWidth="59.0" text="Week" toggleGroup="$radio">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="monthRadio" layoutX="590.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#viewMonth" text="Month" toggleGroup="$radio">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="addButton" layoutX="837.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#add_Appointment" text="Add">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="modifyButton" layoutX="895.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#modifyAppointment" text="Modify">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="968.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#delete_Appointment" text="Delete">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="customersButton" layoutX="395.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#loadCustomers" text="Customers">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="reportsButton" layoutX="569.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#loadReports" text="Reports">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+        <Button fx:id="logoutButton" layoutX="487.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#logout" text="Log Out">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+      <TableView fx:id="table" layoutX="33.0" layoutY="79.0" onMouseClicked="#clearError" prefHeight="244.0" prefWidth="999.0" style="-fx-font-size: 11;">
+         <columns>
+            <TableColumn fx:id="appointmentIDColumn" prefWidth="26.0" style="-fx-alignment: CENTER;" text="ID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="appointmentID" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="appointmentTitleColumn" prefWidth="114.0" style="-fx-alignment: CENTER;" text="Title">
+               <cellValueFactory>
+                  <PropertyValueFactory property="title" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="134.0" style="-fx-alignment: CENTER;" text="Description">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="appointmentLocationColumn" prefWidth="116.0" style="-fx-alignment: CENTER;" text="Location">
+               <cellValueFactory>
+                  <PropertyValueFactory property="location" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="appointmentContactColumn" prefWidth="136.0" style="-fx-alignment: CENTER;" text="Contact">
+               <cellValueFactory>
+                  <PropertyValueFactory property="contact" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="122.0" style="-fx-alignment: CENTER;" text="Type">
+               <cellValueFactory>
+                  <PropertyValueFactory property="type" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="startColumn" prefWidth="138.0" style="-fx-alignment: CENTER;" text="Start">
+               <cellValueFactory>
+                  <PropertyValueFactory property="startFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="endColumn" minWidth="9.0" prefWidth="116.0" style="-fx-alignment: CENTER;" text="End">
+               <cellValueFactory>
+                  <PropertyValueFactory property="endFormatted" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="customerIDColumn" minWidth="0.0" prefWidth="97.0" style="-fx-alignment: CENTER;" text="Customer ID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="customerID" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+        <Label fx:id="errorLabel" layoutX="55.0" layoutY="341.0" text="Error">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutX="14.0" stroke="#241abb" strokeType="INSIDE" width="1051.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutY="375.0" stroke="#241abb" strokeType="INSIDE" width="1065.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="386.0" stroke="#241abb" strokeType="INSIDE" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="369.0" layoutX="1048.0" layoutY="17.0" stroke="#241abb" strokeType="INSIDE" width="17.0" />
+    </children>
+</AnchorPane>

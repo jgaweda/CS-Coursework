@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="490.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="129.0" layoutY="29.0" text="Add Appointment">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="addSaveButton" layoutX="249.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#saveAppointment" text="Save">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="cancelButton" layoutX="297.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#loadAppointments" text="Cancel">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="49.0" layoutY="75.0" text="Appointment ID">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="id" editable="false" layoutX="149.0" layoutY="71.0" onMouseClicked="#clearError" prefWidth="200.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="49.0" layoutY="106.0" text="Title">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="title" layoutX="149.0" layoutY="102.0" onMouseClicked="#clearError" prefWidth="200.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="49.0" layoutY="137.0" text="Description">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="description" layoutX="149.0" layoutY="133.0" onMouseClicked="#clearError" prefWidth="200.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="49.0" layoutY="168.0" text="Location">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="location" layoutX="149.0" layoutY="164.0" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="199.0" text="Type">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="type" layoutX="149.0" layoutY="195.0" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="230.0" text="Date">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="date" layoutX="149.0" layoutY="226.0" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="261.0" text="Start Time">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="startTime" layoutX="149.0" layoutY="257.0" onAction="#updateEndTime" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="292.0" text="End Time">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="endTime" layoutX="149.0" layoutY="288.0" onAction="#updateStartTime" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="323.0" text="Customer ID">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="customer" layoutX="149.0" layoutY="319.0" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="354.0" text="User">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <ComboBox fx:id="user" layoutX="149.0" layoutY="350.0" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label layoutX="49.0" layoutY="385.0" text="Contact">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="contact" layoutX="149.0" layoutY="381.0" onMouseClicked="#clearError" prefWidth="200.0" style="-fx-font-size: 12;" />
+        <Label fx:id="errorLabel" layoutX="49.0" layoutY="428.0" text="Error">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" stroke="#301fff" strokeType="INSIDE" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="17.0" layoutY="473.0" stroke="#241abb" strokeType="INSIDE" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="490.0" stroke="#241abb" strokeType="INSIDE" width="17.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#241abb" height="490.0" layoutX="383.0" stroke="#241abb" strokeType="INSIDE" width="17.0" />
+    </children>
+</AnchorPane>
